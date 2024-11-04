@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 
-export const signInSchema = z.object({
+const signInSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
   password: z.string(),
 });
